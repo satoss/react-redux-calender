@@ -1,26 +1,31 @@
-import React from 'react'
-import {Typography} from '@material-ui/core'
+import React from "react";
+import { Typography } from "@material-ui/core";
 
-import * as styles from './style.css'
+import * as styles from "./style.css";
+import dayjs from "dayjs";
+import { isSameDay, isSameMonth, isFirstDay } from "../../services/calender";
 
-const CalenderElement = ({day}) => {
+const CalenderElement = ({ day }) => {
+  const today = dayjs();
+  const isToday = isSameDay(day, today);
+  const textColor = isSameMonth(day, today) ? "textPrimary" : "textSecondary";
+  const format = isFirstDay(day) ? "M月D日" : "D";
 
-    const isFirstDay = day.date() === 1;
-    const format = isFirstDay ? 'M月D日' : 'D';
-
-    return (
-        <div className={styles.element}>
-            <Typography
-                className={styles.date}
-                align='center'
-                variant='caption'
-                component='div'
-            >
-                {day.format(format)}
-            </Typography>
-        </div>
-    )
-}
-
+  return (
+    <div className={styles.element}>
+      <Typography
+        className={styles.date}
+        color={textColor}
+        align="center"
+        variant="caption"
+        component="div"
+      >
+        <span className={isToday ? styles.today : ""}>
+          {day.format(format)}
+        </span>
+      </Typography>
+    </div>
+  );
+};
 
 export default CalenderElement;
