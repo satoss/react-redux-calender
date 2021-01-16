@@ -374,6 +374,39 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("function _interopRequireDefault(obj) {\n  return obj && obj.__esModule ? obj : {\n    \"default\": obj\n  };\n}\n\nmodule.exports = _interopRequireDefault;\n\n//# sourceURL=webpack:///./node_modules/@babel/runtime/helpers/interopRequireDefault.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/interopRequireWildcard.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ \"./node_modules/@babel/runtime/helpers/typeof.js\");\n\nfunction _getRequireWildcardCache() {\n  if (typeof WeakMap !== \"function\") return null;\n  var cache = new WeakMap();\n\n  _getRequireWildcardCache = function _getRequireWildcardCache() {\n    return cache;\n  };\n\n  return cache;\n}\n\nfunction _interopRequireWildcard(obj) {\n  if (obj && obj.__esModule) {\n    return obj;\n  }\n\n  if (obj === null || _typeof(obj) !== \"object\" && typeof obj !== \"function\") {\n    return {\n      \"default\": obj\n    };\n  }\n\n  var cache = _getRequireWildcardCache();\n\n  if (cache && cache.has(obj)) {\n    return cache.get(obj);\n  }\n\n  var newObj = {};\n  var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;\n\n  for (var key in obj) {\n    if (Object.prototype.hasOwnProperty.call(obj, key)) {\n      var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;\n\n      if (desc && (desc.get || desc.set)) {\n        Object.defineProperty(newObj, key, desc);\n      } else {\n        newObj[key] = obj[key];\n      }\n    }\n  }\n\n  newObj[\"default\"] = obj;\n\n  if (cache) {\n    cache.set(obj, newObj);\n  }\n\n  return newObj;\n}\n\nmodule.exports = _interopRequireWildcard;\n\n//# sourceURL=webpack:///./node_modules/@babel/runtime/helpers/interopRequireWildcard.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/typeof.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/typeof.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("function _typeof(obj) {\n  \"@babel/helpers - typeof\";\n\n  if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") {\n    module.exports = _typeof = function _typeof(obj) {\n      return typeof obj;\n    };\n  } else {\n    module.exports = _typeof = function _typeof(obj) {\n      return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj;\n    };\n  }\n\n  return _typeof(obj);\n}\n\nmodule.exports = _typeof;\n\n//# sourceURL=webpack:///./node_modules/@babel/runtime/helpers/typeof.js?");
+
+/***/ }),
+
 /***/ "./node_modules/@material-ui/core/esm/Accordion/Accordion.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/@material-ui/core/esm/Accordion/Accordion.js ***!
@@ -4562,6 +4595,54 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./node_modules/@material-ui/icons/ArrowBackIos.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/@material-ui/icons/ArrowBackIos.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nvar _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ \"./node_modules/@babel/runtime/helpers/interopRequireDefault.js\");\n\nvar _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ \"./node_modules/@babel/runtime/helpers/interopRequireWildcard.js\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar React = _interopRequireWildcard(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\n\nvar _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ \"./node_modules/@material-ui/icons/utils/createSvgIcon.js\"));\n\nvar _default = (0, _createSvgIcon.default)( /*#__PURE__*/React.createElement(\"path\", {\n  d: \"M11.67 3.87L9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z\"\n}), 'ArrowBackIos');\n\nexports.default = _default;\n\n//# sourceURL=webpack:///./node_modules/@material-ui/icons/ArrowBackIos.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/icons/ArrowForwardIos.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@material-ui/icons/ArrowForwardIos.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nvar _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ \"./node_modules/@babel/runtime/helpers/interopRequireDefault.js\");\n\nvar _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ \"./node_modules/@babel/runtime/helpers/interopRequireWildcard.js\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar React = _interopRequireWildcard(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\n\nvar _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ \"./node_modules/@material-ui/icons/utils/createSvgIcon.js\"));\n\nvar _default = (0, _createSvgIcon.default)( /*#__PURE__*/React.createElement(\"path\", {\n  d: \"M5.88 4.12L13.76 12l-7.88 7.88L8 22l10-10L8 2z\"\n}), 'ArrowForwardIos');\n\nexports.default = _default;\n\n//# sourceURL=webpack:///./node_modules/@material-ui/icons/ArrowForwardIos.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/icons/Dehaze.js":
+/*!***************************************************!*\
+  !*** ./node_modules/@material-ui/icons/Dehaze.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nvar _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ \"./node_modules/@babel/runtime/helpers/interopRequireDefault.js\");\n\nvar _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ \"./node_modules/@babel/runtime/helpers/interopRequireWildcard.js\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar React = _interopRequireWildcard(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\n\nvar _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ \"./node_modules/@material-ui/icons/utils/createSvgIcon.js\"));\n\nvar _default = (0, _createSvgIcon.default)( /*#__PURE__*/React.createElement(\"path\", {\n  d: \"M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z\"\n}), 'Dehaze');\n\nexports.default = _default;\n\n//# sourceURL=webpack:///./node_modules/@material-ui/icons/Dehaze.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@material-ui/icons/utils/createSvgIcon.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@material-ui/icons/utils/createSvgIcon.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nObject.defineProperty(exports, \"default\", {\n  enumerable: true,\n  get: function get() {\n    return _utils.createSvgIcon;\n  }\n});\n\nvar _utils = __webpack_require__(/*! @material-ui/core/utils */ \"./node_modules/@material-ui/core/esm/utils/index.js\");\n\n//# sourceURL=webpack:///./node_modules/@material-ui/icons/utils/createSvgIcon.js?");
+
+/***/ }),
+
 /***/ "./node_modules/@material-ui/styles/esm/ServerStyleSheets/ServerStyleSheets.js":
 /*!*************************************************************************************!*\
   !*** ./node_modules/@material-ui/styles/esm/ServerStyleSheets/ServerStyleSheets.js ***!
@@ -6256,7 +6337,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core */ \"./node_modules/@material-ui/core/esm/index.js\");\n/* harmony import */ var _CalenderElement__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../CalenderElement */ \"./src/components/CalenderElement/index.jsx\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.css */ \"./src/components/CalenderBoard/style.css\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_3__);\n\n // import { createCalender } from \"../../services/calender\";\n\n\n // const calender = createCalender();\n\nconst days = [\"日\", \"月\", \"火\", \"水\", \"木\", \"金\", \"土\"];\n\nconst CalenderBoard = ({\n  calender\n}) => {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: _style_css__WEBPACK_IMPORTED_MODULE_3__[\"container\"]\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__[\"GridList\"], {\n    className: _style_css__WEBPACK_IMPORTED_MODULE_3__[\"grid\"],\n    cols: 7,\n    spacing: 0,\n    cellHeight: \"auto\"\n  }, days.map(d => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"li\", {\n    key: d\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__[\"Typography\"], {\n    className: _style_css__WEBPACK_IMPORTED_MODULE_3__[\"days\"],\n    color: \"textSecondary\",\n    align: \"center\",\n    variant: \"caption\",\n    component: \"div\"\n  }, d))), calender.map((c, i) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"li\", {\n    key: c.toISOString()\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CalenderElement__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    day: c\n  })))));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (CalenderBoard);\n\n//# sourceURL=webpack:///./src/components/CalenderBoard/presentation.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core */ \"./node_modules/@material-ui/core/esm/index.js\");\n/* harmony import */ var _CalenderElement__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../CalenderElement */ \"./src/components/CalenderElement/index.jsx\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.css */ \"./src/components/CalenderBoard/style.css\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\nconst days = [\"日\", \"月\", \"火\", \"水\", \"木\", \"金\", \"土\"];\n\nconst CalenderBoard = ({\n  calender\n}) => {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: _style_css__WEBPACK_IMPORTED_MODULE_3__[\"container\"]\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__[\"GridList\"], {\n    className: _style_css__WEBPACK_IMPORTED_MODULE_3__[\"grid\"],\n    cols: 7,\n    spacing: 0,\n    cellHeight: \"auto\"\n  }, days.map(d => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"li\", {\n    key: d\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__[\"Typography\"], {\n    className: _style_css__WEBPACK_IMPORTED_MODULE_3__[\"days\"],\n    color: \"textSecondary\",\n    align: \"center\",\n    variant: \"caption\",\n    component: \"div\"\n  }, d))), calender.map((c, i) => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"li\", {\n    key: c.toISOString()\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CalenderElement__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    day: c\n  })))));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (CalenderBoard);\n\n//# sourceURL=webpack:///./src/components/CalenderBoard/presentation.jsx?");
 
 /***/ }),
 
@@ -6294,6 +6375,30 @@ eval("var content = __webpack_require__(/*! !../../../node_modules/css-loader/di
 
 /***/ }),
 
+/***/ "./src/components/Navigation/container.jsx":
+/*!*************************************************!*\
+  !*** ./src/components/Navigation/container.jsx ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _presentation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./presentation */ \"./src/components/Navigation/presentation.jsx\");\n\n\n\nconst mapStateToProps = state => ({});\n\nconst mapDispatchToProps = dispatch => ({});\n\nconst mergeProps = (stateProps, dispatchProps) => ({});\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__[\"connect\"])(mapStateToProps, mapDispatchToProps, mergeProps)(_presentation__WEBPACK_IMPORTED_MODULE_1__[\"default\"]));\n\n//# sourceURL=webpack:///./src/components/Navigation/container.jsx?");
+
+/***/ }),
+
+/***/ "./src/components/Navigation/presentation.jsx":
+/*!****************************************************!*\
+  !*** ./src/components/Navigation/presentation.jsx ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core */ \"./node_modules/@material-ui/core/esm/index.js\");\n/* harmony import */ var _material_ui_icons_ArrowBackIos__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/icons/ArrowBackIos */ \"./node_modules/@material-ui/icons/ArrowBackIos.js\");\n/* harmony import */ var _material_ui_icons_ArrowBackIos__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_ArrowBackIos__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _material_ui_icons_ArrowForwardIos__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/icons/ArrowForwardIos */ \"./node_modules/@material-ui/icons/ArrowForwardIos.js\");\n/* harmony import */ var _material_ui_icons_ArrowForwardIos__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_ArrowForwardIos__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _material_ui_icons_Dehaze__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/Dehaze */ \"./node_modules/@material-ui/icons/Dehaze.js\");\n/* harmony import */ var _material_ui_icons_Dehaze__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Dehaze__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\nconst StyledToolbar = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__[\"withStyles\"])({\n  root: {\n    padding: \"0\"\n  }\n})(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__[\"Toolbar\"]);\nconst StyledTypography = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__[\"withStyles\"])({\n  root: {\n    margin: \"0 30px 0 10px\"\n  }\n})(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__[\"Typography\"]);\n\nconst Vavigation = () => {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledToolbar, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__[\"IconButton\"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_Dehaze__WEBPACK_IMPORTED_MODULE_4___default.a, null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"img\", {\n    src: \"/images/calendar_icon.png\",\n    width: \"40\",\n    height: \"40\"\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledTypography, {\n    color: \"textSecondary\",\n    variant: \"h5\",\n    component: \"h1\"\n  }, \"\\u30AB\\u30EC\\u30F3\\u30C0\\u30FC\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__[\"IconButton\"], {\n    size: \"small\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_ArrowBackIos__WEBPACK_IMPORTED_MODULE_2___default.a, null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__[\"IconButton\"], {\n    size: \"small\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_icons_ArrowForwardIos__WEBPACK_IMPORTED_MODULE_3___default.a, null)));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Vavigation);\n\n//# sourceURL=webpack:///./src/components/Navigation/presentation.jsx?");
+
+/***/ }),
+
 /***/ "./src/index.jsx":
 /*!***********************!*\
   !*** ./src/index.jsx ***!
@@ -6302,7 +6407,7 @@ eval("var content = __webpack_require__(/*! !../../../node_modules/css-loader/di
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n/* harmony import */ var _components_CalenderBoard_container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/CalenderBoard/container */ \"./src/components/CalenderBoard/container.jsx\");\n/* harmony import */ var _redux_rootReducer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./redux/rootReducer */ \"./src/redux/rootReducer.js\");\n\n\n\n\n\n\nconst store = Object(redux__WEBPACK_IMPORTED_MODULE_3__[\"createStore\"])(_redux_rootReducer__WEBPACK_IMPORTED_MODULE_5__[\"default\"]);\n\nconst App = () => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_2__[\"Provider\"], {\n  store: store\n}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_CalenderBoard_container__WEBPACK_IMPORTED_MODULE_4__[\"default\"], null));\n\nreact_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.getElementById(\"root\"));\n\n//# sourceURL=webpack:///./src/index.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n/* harmony import */ var _components_CalenderBoard_container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/CalenderBoard/container */ \"./src/components/CalenderBoard/container.jsx\");\n/* harmony import */ var _components_Navigation_container__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/Navigation/container */ \"./src/components/Navigation/container.jsx\");\n/* harmony import */ var _redux_rootReducer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./redux/rootReducer */ \"./src/redux/rootReducer.js\");\n\n\n\n\n\n\n\nconst store = Object(redux__WEBPACK_IMPORTED_MODULE_3__[\"createStore\"])(_redux_rootReducer__WEBPACK_IMPORTED_MODULE_6__[\"default\"]);\n\nconst App = () => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_2__[\"Provider\"], {\n  store: store\n}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Navigation_container__WEBPACK_IMPORTED_MODULE_5__[\"default\"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_CalenderBoard_container__WEBPACK_IMPORTED_MODULE_4__[\"default\"], null));\n\nreact_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.getElementById(\"root\"));\n\n//# sourceURL=webpack:///./src/index.jsx?");
 
 /***/ }),
 
@@ -6350,7 +6455,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var redu
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"createCalender\", function() { return createCalender; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"isSameDay\", function() { return isSameDay; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"isSameMonth\", function() { return isSameMonth; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"isFirstDay\", function() { return isFirstDay; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getMonth\", function() { return getMonth; });\n/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! dayjs */ \"./node_modules/dayjs/dayjs.min.js\");\n/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_0__);\n // export const createCalender = () => {\n//   const firstDay = dayjs().startOf(\"month\");\n//   const firstDayIndex = firstDay.day();\n//   return Array(35)\n//     .fill(0)\n//     .map((_, i) => {\n//       const diffFromFirstDay = i - firstDayIndex;\n//       const day = firstDay.add(diffFromFirstDay, \"day\");\n//       return day;\n//     });\n// };\n\nconst createCalender = month => {\n  const firstDay = getMonth(month);\n  const firstDayIndex = firstDay.day();\n  return Array(35).fill(0).map((_, i) => {\n    const diffFromFirstDay = i - firstDayIndex;\n    const day = firstDay.add(diffFromFirstDay, \"day\");\n    return day;\n  });\n};\nconst isSameDay = (d1, d2) => {\n  const format = \"YYYYMMDD\";\n  return d1.format(format) === d2.format(format);\n};\nconst isSameMonth = (m1, m2) => {\n  const format = \"YYYYMM\";\n  return m1.format(format) === m2.format(format);\n};\nconst isFirstDay = day => {\n  return day.date() === 1;\n};\nconst getMonth = ({\n  year,\n  month\n}) => {\n  return dayjs__WEBPACK_IMPORTED_MODULE_0___default()(`${year}-${month}`);\n};\n\n//# sourceURL=webpack:///./src/services/calender.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"createCalender\", function() { return createCalender; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"isSameDay\", function() { return isSameDay; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"isSameMonth\", function() { return isSameMonth; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"isFirstDay\", function() { return isFirstDay; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getMonth\", function() { return getMonth; });\n/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! dayjs */ \"./node_modules/dayjs/dayjs.min.js\");\n/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_0__);\n\nconst createCalender = month => {\n  const firstDay = getMonth(month);\n  const firstDayIndex = firstDay.day();\n  return Array(35).fill(0).map((_, i) => {\n    const diffFromFirstDay = i - firstDayIndex;\n    const day = firstDay.add(diffFromFirstDay, \"day\");\n    return day;\n  });\n};\nconst isSameDay = (d1, d2) => {\n  const format = \"YYYYMMDD\";\n  return d1.format(format) === d2.format(format);\n};\nconst isSameMonth = (m1, m2) => {\n  const format = \"YYYYMM\";\n  return m1.format(format) === m2.format(format);\n};\nconst isFirstDay = day => {\n  return day.date() === 1;\n};\nconst getMonth = ({\n  year,\n  month\n}) => {\n  return dayjs__WEBPACK_IMPORTED_MODULE_0___default()(`${year}-${month}`);\n};\n\n//# sourceURL=webpack:///./src/services/calender.js?");
 
 /***/ })
 

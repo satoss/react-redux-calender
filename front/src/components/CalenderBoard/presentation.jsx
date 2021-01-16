@@ -1,11 +1,9 @@
 import React from "react";
 import { GridList, Typography } from "@material-ui/core";
 
-// import { createCalender } from "../../services/calender";
 import CalenderElement from "../CalenderElement";
 import * as styles from "./style.css";
 
-// const calender = createCalender();
 const days = ["日", "月", "火", "水", "木", "金", "土"];
 
 const CalenderBoard = ({ calender }) => {
