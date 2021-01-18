@@ -1,13 +1,9 @@
 import dayjs from "dayjs";
 
 import { CALENDER_SET_MONTH } from "./actions";
+import { formatMonth } from "../../services/calender";
 
-const day = dayjs();
-
-const initialState = {
-  year: day.year(),
-  month: day.month() + 1,
-};
+const initialState = formatMonth(dayjs());
 
 const calenderReducer = (state = initialState, { type, payload }) => {
   switch (type) {
