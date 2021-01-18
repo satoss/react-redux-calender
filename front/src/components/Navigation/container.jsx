@@ -1,7 +1,12 @@
 import { connect } from "react-redux";
 
 import Navigation from "./presentation";
-import { getNextMonth, getPreviousMonth } from "../../services/calender";
+import {
+  formatMonth,
+  getMonth,
+  getNextMonth,
+  getPreviousMonth,
+} from "../../services/calender";
 import { calenderSetMonth } from "../../redux/calender/actions";
 
 const mapStateToProps = (state) => ({ calender: state.calender });
@@ -13,6 +18,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 const mergeProps = (stateProps, dispatchProps) => ({
+  month: getMonth(stateProps.calender),
   setNextMonth: () => {
     const nextMonth = getNextMonth(stateProps.calender);
     dispatchProps.setMonth(nextMonth);
@@ -20,6 +26,10 @@ const mergeProps = (stateProps, dispatchProps) => ({
   setPreviousMonth: () => {
     const previousMonth = getPreviousMonth(stateProps.calender);
     dispatchProps.setMonth(previousMonth);
+  },
+  setMonth: (dayObj) => {
+    const month = formatMonth(dayObj);
+    dispatchProps.setMonth(month);
   },
 });
 
