@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import AddScheduleDialog from "./presentation";
 import {
   addScheduleCloseDialog,
-  addScheduleOpenDialog,
+  addScheduleSetValue,
 } from "../../redux/addSchedule/actions";
 
 const mapStateToProps = (state) => ({ schedule: state.addSchedule });
@@ -11,6 +11,9 @@ const mapStateToProps = (state) => ({ schedule: state.addSchedule });
 const mapDispatchToProps = (dispatch) => ({
   closeDialog: () => {
     dispatch(addScheduleCloseDialog());
+  },
+  setSchedule: (value) => {
+    dispatch(addScheduleSetValue(value));
   },
 });
 
