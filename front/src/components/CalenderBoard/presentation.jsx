@@ -23,9 +23,12 @@ const CalenderBoard = ({ calender, month, openAddScheduleDialog }) => {
             </Typography>
           </li>
         ))}
-        {calender.map((c, i) => (
-          <li key={c.toISOString()} onClick={() => openAddScheduleDialog(c)}>
-            <CalenderElement day={c} month={month} />
+        {calender.map(({ date, schedules }) => (
+          <li
+            key={date.toISOString()}
+            onClick={() => openAddScheduleDialog(date)}
+          >
+            <CalenderElement day={date} month={month} schedules={schedules} />
           </li>
         ))}
       </GridList>

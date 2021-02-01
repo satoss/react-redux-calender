@@ -9,8 +9,9 @@ import {
   isFirstDay,
   getMonth,
 } from "../../services/calender";
+import Schedule from "../Schedule";
 
-const CalenderElement = ({ day, month }) => {
+const CalenderElement = ({ day, month, schedules }) => {
   const today = dayjs();
   const isToday = isSameDay(day, today);
 
@@ -34,6 +35,11 @@ const CalenderElement = ({ day, month }) => {
           {day.format(format)}
         </span>
       </Typography>
+      <div className={styles.schedules}>
+        {schedules.map((e) => (
+          <Schedule key={e.id} schedule={e} />
+        ))}
+      </div>
     </div>
   );
 };
