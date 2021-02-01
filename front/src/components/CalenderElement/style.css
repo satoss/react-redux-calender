@@ -18,6 +18,12 @@
 }
 
 .schedules {
-  overflow: scroll;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   height: calc(18vh - 40px);
+}
+
+.schedules::-webkit-scrollbar {
+  display: none;
 }

@@ -11,16 +11,15 @@ import {
 } from "../../services/calender";
 import Schedule from "../Schedule";
 
-const CalenderElement = ({ day, month, schedules }) => {
+const CalenderElement = ({ day, month, schedules, ...props }) => {
   const today = dayjs();
   const isToday = isSameDay(day, today);
 
   const currentMonth = getMonth(month);
-  const textColor = isSameMonth(day, currentMonth)
-    ? "textPrimary"
-    : "textSecondary";
+  const SameMonth = isSameMonth(day, currentMonth);
+  const textColor = isSameMonth ? "textPrimary" : "textSecondary";
 
-  const format = isFirstDay(day) ? "M月D日" : "D";
+  const format = isFirstDay(day) && !SameMonth ? "M月D日" : "D";
 
   return (
     <div className={styles.element}>
@@ -37,7 +36,7 @@ const CalenderElement = ({ day, month, schedules }) => {
       </Typography>
       <div className={styles.schedules}>
         {schedules.map((e) => (
-          <Schedule key={e.id} schedule={e} />
+          <Schedule key={e.id} schedule={e} {...props} />
         ))}
       </div>
     </div>

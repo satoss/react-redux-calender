@@ -11,6 +11,7 @@ import rootReducer from "./redux/rootReducer";
 import CalenderBoard from "./components/CalenderBoard/container";
 import Navigation from "./components/Navigation/container";
 import AddScheduleDialog from "./components/AddScheduleDialog/container";
+import CurrentScheduleDialog from "./components/CurrentScheduleDialog/container";
 
 dayjs.locale("ja");
 
@@ -29,6 +30,7 @@ const App = () => (
       <Navigation />
       <CalenderBoard />
       <AddScheduleDialog />
+      <CurrentScheduleDialog />
     </MuiPickersUtilsProvider>
   </Provider>
 );
