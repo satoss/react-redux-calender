@@ -1,5 +1,9 @@
-import { SCHEDULE_ADD_ITEM } from "./actions";
-import dayjs from "dayjs";
+import {
+  SCHEDULE_ADD_ITEM,
+  SCHEDULE_FETCH_ITEM,
+  SCHEDULE_SET_LOADING,
+  SCHEDULE_DELETE_ITEM,
+} from "./actions";
 
 const initialState = {
   items: [],
@@ -11,7 +15,21 @@ const schedulesReducer = (state = initialState, { type, payload }) => {
     case SCHEDULE_ADD_ITEM:
       return {
         ...state,
-        items: [...state.items, { ...payload, id: state.items.length + 1 }],
+        items: [...state.items, payload],
+      };
+    case SCHEDULE_SET_LOADING:
+      return { ...state, isLoading: true };
+    case SCHEDULE_FETCH_ITEM:
+      return {
+        ...state,
+        isLoading: false,
+        items: payload,
+      };
+    case SCHEDULE_DELETE_ITEM:
+      return {
+        ...state,
+        isLoading: false,
+        items: payload,
       };
     default:
       return state;

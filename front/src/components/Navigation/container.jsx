@@ -8,12 +8,16 @@ import {
   getPreviousMonth,
 } from "../../services/calender";
 import { calenderSetMonth } from "../../redux/calender/actions";
+import { asyncScheduleFetchItem } from "../../redux/schedules/effects";
 
 const mapStateToProps = (state) => ({ calender: state.calender });
 
 const mapDispatchToProps = (dispatch) => ({
   setMonth: (month) => {
     dispatch(calenderSetMonth(month));
+  },
+  fetchItem: (month) => {
+    dispatch(asyncScheduleFetchItem(month));
   },
 });
 
@@ -22,14 +26,17 @@ const mergeProps = (stateProps, dispatchProps) => ({
   setNextMonth: () => {
     const nextMonth = getNextMonth(stateProps.calender);
     dispatchProps.setMonth(nextMonth);
+    dispatchProps.fetchItem(nextMonth);
   },
   setPreviousMonth: () => {
     const previousMonth = getPreviousMonth(stateProps.calender);
     dispatchProps.setMonth(previousMonth);
+    dispatchProps.fetchItem(previousMonth);
   },
   setMonth: (dayObj) => {
     const month = formatMonth(dayObj);
     dispatchProps.setMonth(month);
+    dispatchProps.fetchItem(month);
   },
 });
 
