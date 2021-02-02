@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { createStore, compose } from "redux";
+import { createStore, compose, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
 import dayjs from "dayjs";
 import "dayjs/locale/ja";
 import DayjsUtils from "@date-io/dayjs";
@@ -15,14 +16,12 @@ import CurrentScheduleDialog from "./components/CurrentScheduleDialog/container"
 
 dayjs.locale("ja");
 
-const store = createStore(
-  rootReducer,
-  compose(
-    process.env.NODE_ENV === "development" && window.devToolsExtension
-      ? window.devToolsExtension()
-      : (f) => f
-  )
-);
+const composeEnhancer =
+  process.env.NODE_ENV === "production"
+    ? compose
+    : window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(rootReducer, composeEnhancer(applyMiddleware(thunk)));
 
 const App = () => (
   <Provider store={store}>
