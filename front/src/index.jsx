@@ -13,6 +13,7 @@ import CalenderBoard from "./components/CalenderBoard/container";
 import Navigation from "./components/Navigation/container";
 import AddScheduleDialog from "./components/AddScheduleDialog/container";
 import CurrentScheduleDialog from "./components/CurrentScheduleDialog/container";
+import ErrorSnackBar from "./components/ErrorSnackBar/container";
 
 dayjs.locale("ja");
 
@@ -30,6 +31,7 @@ const App = () => (
       <CalenderBoard />
       <AddScheduleDialog />
       <CurrentScheduleDialog />
+      <ErrorSnackBar />
     </MuiPickersUtilsProvider>
   </Provider>
 );

@@ -9,6 +9,7 @@ const header = {
 
 export const get = async (path) => {
   const res = await fetch(url(path));
+  checkError(res.status);
   const result = await res.json();
 
   return result;
@@ -17,6 +18,7 @@ export const get = async (path) => {
 export const post = async (path, body) => {
   const options = { ...header, method: "POST", body: JSON.stringify(body) };
   const res = await fetch(url(path), options);
+  checkError(res.status);
   const result = await res.json();
 
   return result;
@@ -24,7 +26,14 @@ export const post = async (path, body) => {
 
 export const deleteReq = async (path, body) => {
   const options = { method: "DELETE" };
-  await fetch(url(path), options);
+  const res = await fetch(url(path), options);
+  checkError(res.status);
 
   return;
+};
+
+const checkError = (status) => {
+  if (status >= 400) {
+    throw new Error("エラーが発生しました。時間を置いて再度お試しください。");
+  }
 };
