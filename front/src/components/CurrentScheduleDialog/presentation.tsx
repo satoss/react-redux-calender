@@ -16,22 +16,32 @@ import {
 } from '@material-ui/icons';
 
 import styles from './style.css';
+import dayjs from 'dayjs';
 
 const spacer = (top, bottom) => ({
   margin: `${top}px 0 ${bottom}px 0`,
 });
 
 interface CurrentScheduleDialogProps {
-  schedule?: any;
-  closeDialog?: any;
-  deleteItem?: any;
+  schedule?: {
+    item: {
+      id: number;
+      date: dayjs.Dayjs;
+      title: string;
+      description: string;
+      location: string;
+    };
+    isDialogOpen: boolean;
+  };
+  closeDialog?: (event: React.MouseEvent<HTMLInputElement>) => void;
+  deleteItem?: (event: React.MouseEvent<HTMLInputElement>) => void;
 }
 
-const CurrentScheduleDialog = ({
+const CurrentScheduleDialog: React.FC<CurrentScheduleDialogProps> = ({
   schedule: { item, isDialogOpen },
   closeDialog,
   deleteItem,
-}: CurrentScheduleDialogProps) => {
+}) => {
   return (
     <Dialog open={isDialogOpen} onClose={closeDialog} maxWidth="xs" fullWidth>
       <DialogActions>

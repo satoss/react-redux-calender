@@ -5,7 +5,19 @@ import {
   SCHEDULE_DELETE_ITEM,
   SCHEDULE_ASYNC_FAILURE,
   SCHEDULE_RESET_ERROR,
-} from "./actions";
+} from './actions';
+
+export interface SchedulesState {
+  items: {
+    id: number;
+    date: string;
+    title: string;
+    description: string;
+    location: string;
+  }[];
+  isLoading: boolean;
+  error: string;
+}
 
 const initialState = {
   items: [],
@@ -13,7 +25,10 @@ const initialState = {
   error: null,
 };
 
-const schedulesReducer = (state = initialState, { type, payload, error }) => {
+export const schedulesReducer = (
+  state = initialState,
+  { type, payload, error }
+) => {
   switch (type) {
     case SCHEDULE_ADD_ITEM:
       return {
@@ -42,5 +57,3 @@ const schedulesReducer = (state = initialState, { type, payload, error }) => {
       return state;
   }
 };
-
-export default schedulesReducer;

@@ -1,15 +1,30 @@
+import dayjs from 'dayjs';
 import {
   CURRENT_SCHEDULE_SET_ITEM,
   CURRENT_SCHEDULE_OPEN_DIALOG,
   CURRENT_SCHEDULE_CLOSE_DIALOG,
-} from "./actions";
+} from './actions';
+
+export interface currentScheduleState {
+  item: {
+    id: number;
+    date: dayjs.Dayjs;
+    title: string;
+    description: string;
+    location: string;
+  };
+  isDialogOpen: boolean;
+}
 
 const initialState = {
   item: null,
   isDialogOpen: false,
 };
 
-const currentScheduleReducer = (state = initialState, { type, payload }) => {
+export const currentScheduleReducer = (
+  state = initialState,
+  { type, payload }
+) => {
   switch (type) {
     case CURRENT_SCHEDULE_SET_ITEM:
       return { ...state, item: payload };
@@ -21,5 +36,3 @@ const currentScheduleReducer = (state = initialState, { type, payload }) => {
       return state;
   }
 };
-
-export default currentScheduleReducer;

@@ -1,13 +1,13 @@
-import React from "react";
-import { Snackbar, IconButton } from "@material-ui/core";
-import { Close, Warning } from "@material-ui/icons";
-import { makeStyles } from "@material-ui/core/styles";
-import classNames from "classnames";
+import React from 'react';
+import { Snackbar, IconButton } from '@material-ui/core';
+import { Close, Warning } from '@material-ui/icons';
+import { makeStyles } from '@material-ui/core/styles';
+import classNames from 'classnames';
 
 const useStyles = makeStyles((theme) => ({
   message: {
-    display: "flex",
-    alignItems: "center",
+    display: 'flex',
+    alignItems: 'center',
   },
   icon: {
     fontSize: 20,
@@ -18,14 +18,22 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ErrorSnackBar = ({ error, handleClose }) => {
+interface ErrorSnackBarProps {
+  error: string;
+  handleClose: (event: React.MouseEvent<HTMLInputElement>) => void;
+}
+
+const ErrorSnackBar: React.FC<ErrorSnackBarProps> = ({
+  error,
+  handleClose,
+}) => {
   const classes = useStyles();
   return (
     <Snackbar
       open={!!error}
       onClose={handleClose}
       autoHideDuration={3000}
-      anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+      anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
       message={
         <span className={classes.message}>
           <Warning className={classNames(classes.icon, classes.iconVariant)} />

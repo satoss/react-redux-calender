@@ -3,28 +3,39 @@ import { GridList, Typography } from '@material-ui/core';
 
 import CalenderElement from '../CalenderElement';
 import * as styles from './style.css';
+import dayjs from 'dayjs';
 
 const days = ['日', '月', '火', '水', '木', '金', '土'];
 
 interface CalenderBoardProps {
-  calender?: any;
-  month?: any;
-  openAddScheduleDialog?: any;
-  openCurrentScheduleDialog?: any;
-  fetchSchedule?: any;
+  calender?: {
+    date: dayjs.Dayjs;
+    schedules: {
+      id: number;
+      title: string;
+      description: string;
+      location: string;
+      date: dayjs.Dayjs;
+    }[];
+  }[];
+  month?: { month: number; year: number };
+  openAddScheduleDialog?: Function;
+  openCurrentScheduleDialog?: (
+    event: React.MouseEvent<HTMLInputElement>
+  ) => void;
+  fetchSchedule?: Function;
 }
 
-const CalenderBoard = ({
+const CalenderBoard: React.FC<CalenderBoardProps> = ({
   calender,
   month,
   openAddScheduleDialog,
   openCurrentScheduleDialog,
   fetchSchedule,
-}: CalenderBoardProps) => {
+}) => {
   useEffect(() => {
     fetchSchedule(month);
   }, []);
-
   return (
     <div className={styles.container}>
       <GridList className={styles.grid} cols={7} spacing={0} cellHeight="auto">

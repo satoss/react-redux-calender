@@ -10,6 +10,7 @@ import ArrowBackIos from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIos from '@material-ui/icons/ArrowForwardIos';
 import DehazeIcon from '@material-ui/icons/Dehaze';
 import { DatePicker } from '@material-ui/pickers';
+import dayjs from 'dayjs';
 
 const StyledToolbar = withStyles({
   root: { padding: '0' },
@@ -23,7 +24,19 @@ const StyledDatePicker = withStyles({
   root: { marginLeft: 30 },
 })(DatePicker);
 
-const Vavigation = ({ setNextMonth, setPreviousMonth, setMonth, month }) => {
+interface NavigationProps {
+  setNextMonth: (event: React.MouseEvent<HTMLInputElement>) => void;
+  setPreviousMonth: (event: React.MouseEvent<HTMLInputElement>) => void;
+  setMonth: Function;
+  month: dayjs.Dayjs;
+}
+
+const Navigation: React.FC<NavigationProps> = ({
+  setNextMonth,
+  setPreviousMonth,
+  setMonth,
+  month,
+}) => {
   return (
     <StyledToolbar>
       <IconButton>
@@ -55,4 +68,4 @@ const Vavigation = ({ setNextMonth, setPreviousMonth, setMonth, month }) => {
   );
 };
 
-export default Vavigation;
+export default Navigation;

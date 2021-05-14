@@ -3,21 +3,32 @@ import {
   ADD_SCHEDULE_OPEN_DIALOG,
   ADD_SCHEDULE_CLOSE_DIALOG,
   ADD_SCHEDULE_START_EDIT,
-} from "./actions";
-import dayjs from "dayjs";
+} from './actions';
+import dayjs from 'dayjs';
+
+export interface AddScheduleState {
+  form: {
+    title: string;
+    description: string;
+    date: dayjs.Dayjs;
+    location: string;
+  };
+  isDialogOpen: boolean;
+  isStartEdit: boolean;
+}
 
 const initialState = {
   form: {
-    title: "",
-    description: "",
+    title: '',
+    description: '',
     date: dayjs(),
-    location: "",
+    location: '',
   },
   isDialogOpen: false,
   isStartEdit: false,
 };
 
-const addScheduleReducer = (state = initialState, { type, payload }) => {
+export const addScheduleReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case ADD_SCHEDULE_SET_VALUE:
       return { ...state, form: { ...state.form, ...payload } };
@@ -31,5 +42,3 @@ const addScheduleReducer = (state = initialState, { type, payload }) => {
       return state;
   }
 };
-
-export default addScheduleReducer;

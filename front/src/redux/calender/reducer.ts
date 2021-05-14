@@ -1,11 +1,16 @@
-import dayjs from "dayjs";
+import dayjs from 'dayjs';
 
-import { CALENDER_SET_MONTH } from "./actions";
-import { formatMonth } from "../../services/calender";
+import { CALENDER_SET_MONTH } from './actions';
+import { formatMonth } from '../../services/calender';
+
+export interface CalenderState {
+  month: number;
+  year: number;
+}
 
 const initialState = formatMonth(dayjs());
 
-const calenderReducer = (state = initialState, { type, payload }) => {
+export const calenderReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case CALENDER_SET_MONTH:
       return payload;
@@ -13,5 +18,3 @@ const calenderReducer = (state = initialState, { type, payload }) => {
       return state;
   }
 };
-
-export default calenderReducer;

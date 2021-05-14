@@ -17,16 +17,10 @@ import ErrorSnackBar from './components/ErrorSnackBar/container';
 
 dayjs.locale('ja');
 
-declare global {
-  interface Window {
-    __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
-  }
-}
-
 const composeEnhancer =
   process.env.NODE_ENV === 'production'
     ? compose
-    : window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+    : (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(rootReducer, composeEnhancer(applyMiddleware(thunk)));
 

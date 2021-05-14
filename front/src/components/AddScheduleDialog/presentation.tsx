@@ -30,14 +30,23 @@ const Title = withStyles({
 })(Input);
 
 interface AddScheduleDialogProps {
-  schedule?: any;
-  closeDialog?: any;
-  setSchedule?: any;
-  saveSchedule?: any;
-  setIsEditStart?: any;
+  schedule?: {
+    form: {
+      title: string;
+      location: string;
+      description: string;
+      date: string;
+    };
+    isDialogOpen: boolean;
+    isStartEdit: boolean;
+  };
+  closeDialog?: Function;
+  setSchedule?: Function;
+  saveSchedule?: Function;
+  setIsEditStart?: Function;
 }
 
-const AddScheduleDialog = ({
+const AddScheduleDialog: React.FC<AddScheduleDialogProps> = ({
   schedule: {
     form: { title, location, description, date },
     isDialogOpen,
@@ -47,15 +56,20 @@ const AddScheduleDialog = ({
   setSchedule,
   saveSchedule,
   setIsEditStart,
-}: AddScheduleDialogProps) => {
+}) => {
   const isTitleInvalid = !title && isStartEdit;
 
   return (
-    <Dialog open={isDialogOpen} onClose={closeDialog} maxWidth="xs" fullWidth>
+    <Dialog
+      open={isDialogOpen}
+      onClose={() => closeDialog()}
+      maxWidth="xs"
+      fullWidth
+    >
       <DialogActions>
         <div className={styles.closeButton}>
           <Tooltip title="閉じる" placement="bottom">
-            <IconButton onClick={closeDialog} size="small">
+            <IconButton onClick={() => closeDialog()} size="small">
               <Close />
             </IconButton>
           </Tooltip>
@@ -68,7 +82,7 @@ const AddScheduleDialog = ({
           placeholder="タイトルと日時を追加"
           value={title}
           onChange={(e) => setSchedule({ title: e.target.value })}
-          onBlur={setIsEditStart}
+          onBlur={() => setIsEditStart()}
           error={isTitleInvalid}
         />
         <div className={styles.validation}>
@@ -128,7 +142,7 @@ const AddScheduleDialog = ({
         <Button
           color="primary"
           variant="outlined"
-          onClick={saveSchedule}
+          onClick={() => saveSchedule()}
           disabled={!title}
         >
           保存
